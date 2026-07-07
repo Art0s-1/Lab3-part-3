@@ -58,6 +58,5 @@ void show_histogram_svg(const vector<size_t>& bins) {
 		svg_rect(TEXT_WIDTH, top, bin_width, BIN_HEIGHT, "red", "#ffeeee");
 		top += BIN_HEIGHT;
 	}
-
 	svg_end();
 }
