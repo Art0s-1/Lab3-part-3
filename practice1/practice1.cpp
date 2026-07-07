@@ -32,6 +32,16 @@ int main() {
 
 	const auto bins = make_histogram(numbers, min, max, bin_count);
 
-	show_histogram_svg(bins);
+	string decoration;
+	while (true) {
+		cerr << "Enter text decoration: ";
+		cin >> decoration;
+		if (decoration == "none" || decoration == "underline" ||
+			decoration == "overline" || decoration == "line-through") {
+			break; 
+		}
+		cerr << "Warning: Invalid decoration. Please try again." << endl;
+	}
+	show_histogram_svg(bins, decoration);
 }
 
